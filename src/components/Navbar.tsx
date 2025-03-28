@@ -1,40 +1,54 @@
-import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
-import Colorado from '../pages/state/colorado';
+import Link from 'next/link';
 
 const NavbarComponent = ({ initialVisitedStates = ['Colorado'] }) => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
-      <Container>
-        <Navbar.Brand href="/">Fly Fishing 50 States</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/states">Explore All States</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/blog">Blog</Nav.Link>
-            <Nav.Link href="/contact">Contact</Nav.Link>
+    <nav className="bg-dark text-light py-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <Link href="/">
+          <a className="text-2xl font-semibold text-white">Fly Fishing 50 States</a>
+        </Link>
 
-            <Dropdown>
-              <Dropdown.Toggle variant="success">
-                Visited States
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                {initialVisitedStates.length > 0 ? (
-                  initialVisitedStates.map((state) => (
-                    <Dropdown.Item key={state} href={`/state/${state.toLowerCase().replace(/\s+/g, '-')}`}>
-                      {state}
-                    </Dropdown.Item>
-                  ))
-                ) : (
-                  <Dropdown.Item disabled>No states visited yet</Dropdown.Item>
-                )}
-              </Dropdown.Menu>
-            </Dropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        <div className="lg:hidden">
+          <button className="text-white">☰</button>
+        </div>
+
+        <div className="hidden lg:flex space-x-6">
+          <Link href="/">
+            <a className="text-white hover:text-gray-400">Home</a>
+          </Link>
+          <Link href="/states">
+            <a className="text-white hover:text-gray-400">Explore All States</a>
+          </Link>
+          <Link href="/about">
+            <a className="text-white hover:text-gray-400">About</a>
+          </Link>
+          <Link href="/blog">
+            <a className="text-white hover:text-gray-400">Blog</a>
+          </Link>
+          <Link href="/contact">
+            <a className="text-white hover:text-gray-400">Contact</a>
+          </Link>
+
+          <div className="relative">
+            <button className="text-white hover:text-gray-400">Visited States</button>
+            <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md">
+              {initialVisitedStates.length > 0 ? (
+                initialVisitedStates.map((state) => (
+                  <Link
+                    key={state}
+                    href={`/state/${state.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    <a className="block px-4 py-2 text-black hover:bg-gray-200">{state}</a>
+                  </Link>
+                ))
+              ) : (
+                <div className="block px-4 py-2 text-gray-500">No states visited yet</div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 
