@@ -1,11 +1,9 @@
-import NavbarComponent from '../components/Navbar';
-import FooterComponent from '../components/Footer';
+import React from 'react';
 
 const About = () => {
   return (
     <div>
-      {/* Navbar */}
-      <NavbarComponent />
+
 
       {/* Hero Section (Image of the fisherman) */}
       <section className="hero-section bg-white py-5">
@@ -44,8 +42,6 @@ const About = () => {
         <button className="btn btn-primary btn-lg mt-3">Follow the Adventure</button>
       </section>
 
-      {/* Footer */}
-      <FooterComponent />
     </div>
   );
 };

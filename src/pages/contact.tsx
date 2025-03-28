@@ -1,11 +1,8 @@
-import NavbarComponent from '../components/Navbar';
-import FooterComponent from '../components/Footer';
+import React from 'react';
 
 const Contact = () => {
   return (
     <div>
-      {/* Navbar */}
-      <NavbarComponent />
 
       {/* Contact Section */}
       <section className="contact-section py-5 bg-white">
@@ -30,8 +27,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <FooterComponent />
     </div>
   );
 };

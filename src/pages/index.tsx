@@ -1,12 +1,8 @@
-import NavbarComponent from '../components/Navbar';
-import FooterComponent from '../components/Footer';
+import React from 'react';
 
 const Home = () => {
   return (
     <div>
-      {/* Navbar */}
-      <NavbarComponent />
-
       {/* Hero Section (Video background) */}
       <section className="hero-section bg-white text-white py-5">
         <div className="container text-center">
@@ -15,10 +11,17 @@ const Home = () => {
             Join our journey as we explore the most scenic fly fishing spots across the USA.
           </p>
           <div className="mt-4">
-            <video width="100%" height="auto" controls>
-              <source src="https://via.placeholder.com/1280x720" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div className="ratio ratio-16x9">
+              <iframe
+                width="100%"
+                height="400"
+                src="https://www.youtube.com/embed/tIxQRzJSOgc"
+                 title="Fly Fishing 50 States"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
@@ -73,8 +76,6 @@ const Home = () => {
         <button className="btn btn-primary btn-lg mt-3">Explore All 50 States</button>
       </section>
 
-      {/* Footer */}
-      <FooterComponent />
     </div>
   );
 };
