@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> header}}
+<body>
+    {{> navbar}}
+    <div id="content">
+        <h3>Statistics</h3>
+        <button id="showFormBtn" class="btn btn-secondary">Add Statistics</button>
+        <form action="/stats" method="POST" id="myForm" class="hidden">
+            <label for="mountain">Mountain:</label>
+            <select id="mountain" name="mountain" required>
+                <option value="">Select a mountain...</option>
+                <option value="Aspen Snowmass">Aspen Snowmass</option>
+                <option value="Jackson Hole Mountain Resort">Jackson Hole Mountain Resort</option>
+            </select>
+
+            <label for="top_speed">Top speed:</label>
+            <input type="text" id="top_speed" name="top_speed" required>
+
+            <label for="reviewOption">Review:</label>
+            <select id="reviewOption" name="reviewOption">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <textarea id="reviewText" name="reviewText" class="hidden"></textarea>
+
+            <button type="button" id="close-form" class="btn btn-danger">Close</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="/js/script.js"></script>
+    {{> footer}}
+</body>
+</html>
