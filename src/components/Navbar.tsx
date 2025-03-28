@@ -1,51 +1,79 @@
+import React from 'react';
 import Link from 'next/link';
 
-const NavbarComponent = ({ initialVisitedStates = ['Colorado'] }) => {
+interface NavbarProps {
+  initialVisitedStates?: string[];
+}
+
+const NavbarComponent: React.FC<NavbarProps> = ({ initialVisitedStates = ['Colorado'] }) => {
   return (
-    <nav className="bg-dark text-light py-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/">
-          <a className="text-2xl font-semibold text-white">Fly Fishing 50 States</a>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container-fluid">
+        <Link href="/" legacyBehavior>
+          <a className="navbar-brand">Fly Fishing 50 States</a>
         </Link>
 
-        <div className="lg:hidden">
-          <button className="text-white">☰</button>
-        </div>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-        <div className="hidden lg:flex space-x-6">
-          <Link href="/">
-            <a className="text-white hover:text-gray-400">Home</a>
-          </Link>
-          <Link href="/states">
-            <a className="text-white hover:text-gray-400">Explore All States</a>
-          </Link>
-          <Link href="/about">
-            <a className="text-white hover:text-gray-400">About</a>
-          </Link>
-          <Link href="/blog">
-            <a className="text-white hover:text-gray-400">Blog</a>
-          </Link>
-          <Link href="/contact">
-            <a className="text-white hover:text-gray-400">Contact</a>
-          </Link>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto me-4"> {/* Add 'me-4' here to add margin to the right */}
+            <li className="nav-item">
+              <Link href="/" legacyBehavior>
+                <a className="nav-link">Home</a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/states" legacyBehavior>
+                <a className="nav-link">Explore All States</a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/about" legacyBehavior>
+                <a className="nav-link">About</a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/blog" legacyBehavior>
+                <a className="nav-link">Blog</a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/contact" legacyBehavior>
+                <a className="nav-link">Contact</a>
+              </Link>
+            </li>
 
-          <div className="relative">
-            <button className="text-white hover:text-gray-400">Visited States</button>
-            <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md">
-              {initialVisitedStates.length > 0 ? (
-                initialVisitedStates.map((state) => (
-                  <Link
-                    key={state}
-                    href={`/state/${state.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    <a className="block px-4 py-2 text-black hover:bg-gray-200">{state}</a>
-                  </Link>
-                ))
-              ) : (
-                <div className="block px-4 py-2 text-gray-500">No states visited yet</div>
-              )}
-            </div>
-          </div>
+            <li className="nav-item dropdown">
+              <button className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Visited States
+              </button>
+              <ul className="dropdown-menu">
+                {initialVisitedStates.length > 0 ? (
+                  initialVisitedStates.map((state) => (
+                    <li key={state}>
+                      <Link href={`/state/${state.toLowerCase().replace(/\s+/g, '-')}`} legacyBehavior>
+                        <a className="dropdown-item">{state}</a>
+                      </Link>
+                    </li>
+                  ))
+                ) : (
+                  <li>
+                    <span className="dropdown-item text-muted">No states visited yet</span>
+                  </li>
+                )}
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
