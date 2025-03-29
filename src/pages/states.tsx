@@ -1,7 +1,8 @@
+// pages/states.js
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import MapsComponent from '../components/USMAP'; // Adjust the import path as necessary
+import USMap from '../components/USMAP'; // Adjust the import path as necessary
 
 const visitedStates = new Set(['Colorado']); // Example visited states
 
@@ -21,13 +22,6 @@ export default function StatesPage() {
   const router = useRouter();
   const [search, setSearch] = useState('');
   const progress = (visitedStates.size / allStates.length) * 100;
-
-  // Navigate when a visited state is clicked
-  const handleStateClick = (stateName) => {
-    if (visitedStates.has(stateName)) {
-      router.push(`/state/${stateName.toLowerCase().replace(/\s+/g, '-')}`);
-    }
-  };
 
   return (
     <div className="container my-5 text-center">
@@ -51,7 +45,7 @@ export default function StatesPage() {
         </div>
       </div>
 
-      <MapsComponent />
+      <USMap visitedStates={visitedStates} />
       
       {/* Searchable Visited State List */}
       <h2 className="mt-4">Find a Visited State</h2>
