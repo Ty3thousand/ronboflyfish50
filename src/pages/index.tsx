@@ -1,6 +1,13 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 const Home = () => {
+  const router = useRouter();
+
+  const handleExploreClick = () => {
+    router.push('/states'); // Update this path if needed
+  };
+
   return (
     <div>
       {/* Hero Section (Video background) */}
@@ -16,7 +23,7 @@ const Home = () => {
                 width="100%"
                 height="400"
                 src="https://www.youtube.com/embed/tIxQRzJSOgc"
-                 title="Fly Fishing 50 States"
+                title="Fly Fishing 50 States"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -42,7 +49,7 @@ const Home = () => {
       {/* Featured States Section */}
       <section className="featured-states py-5 bg-white">
         <div className="container">
-          <h2 className="text-center mb-4">Featured States</h2>
+          <h2 className="text-center mb-4">While not biased enjoy our favorite adventures:</h2>
           <div className="row">
             <div className="col-md-4">
               <div className="state-card">
@@ -71,11 +78,11 @@ const Home = () => {
 
       {/* Call to Action Section */}
       <section className="cta-section bg-white text-center py-5">
-        <h2>Ready to Explore All 50 States?</h2>
         <p className="lead">Join us as we document fly fishing adventures across the entire country.</p>
-        <button className="btn btn-primary btn-lg mt-3">Explore All 50 States</button>
+        <button className="btn btn-primary btn-lg mt-3" onClick={handleExploreClick}>
+          Explore the 50 States of Fish
+        </button>
       </section>
-
     </div>
   );
 };

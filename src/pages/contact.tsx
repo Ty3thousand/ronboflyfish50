@@ -22,8 +22,22 @@ const Contact = () => {
       <section className="social-media-section py-5 bg-white text-center">
         <h2>Follow Me on Social Media</h2>
         <div className="mt-4">
-          <a href="https://www.youtube.com/" className="btn btn-danger btn-lg mx-2">YouTube</a>
-          <a href="https://www.instagram.com/" className="btn btn-primary btn-lg mx-2">Instagram</a>
+          <a 
+            href="https://www.youtube.com/@flyfishing50states" 
+            className="btn btn-danger btn-lg mx-2" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            YouTube
+          </a>
+          <a 
+            href="https://www.instagram.com/" 
+            className="btn btn-primary btn-lg mx-2" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
         </div>
       </section>
 
@@ -32,3 +46,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

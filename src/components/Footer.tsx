@@ -11,7 +11,7 @@ const FooterComponent: React.FC = () => {
             <div>
               <h5 className="text-lg mb-3">Follow Us</h5>
               <Link
-                href="https://www.youtube.com/@FlyFishing50States"
+                href="https://www.youtube.com/@flyfishing50states"
                 target="_blank"
                 passHref
               >
