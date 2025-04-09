@@ -53,21 +53,21 @@ const Home = () => {
           <div className="row">
             <div className="col-md-4">
               <div className="state-card">
-                <img src="https://via.placeholder.com/300" alt="State 1" className="img-fluid" />
+                <img src="/img/RonboTrialPicture.jpeg" alt="State 1" className="img-fluid" />
                 <h5 className="mt-2">Colorado</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="state-card">
-                <img src="https://via.placeholder.com/300" alt="State 2" className="img-fluid" />
+                <img src="/img/RonboTrialPicture.jpeg" alt="State 2" className="img-fluid" />
                 <h5 className="mt-2">California</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="state-card">
-                <img src="https://via.placeholder.com/300" alt="State 3" className="img-fluid" />
+                <img src="/img/RonboTrialPicture.jpeg" alt="State 3" className="img-fluid" />
                 <h5 className="mt-2">Montana</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>

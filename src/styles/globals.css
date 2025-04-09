@@ -59,3 +59,8 @@
     margin-top: auto; /* Pushes the footer to the bottom */
   }
   
+
+  .bg-water-pattern {
+    background-color: red; /* just for testing */
+  }
+  

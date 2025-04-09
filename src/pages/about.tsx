@@ -4,6 +4,7 @@ const About = () => {
   return (
     <div>
 
+
       {/* Hero Section (Image of the fisherman) */}
       <section className="hero-section bg-white py-5">
         <div className="container text-center">
@@ -12,7 +13,7 @@ const About = () => {
             A deep dive into my life, from my time at CSU to my real estate career at Sotheby’s.
           </p>
           <div className="mt-4">
-            <img src="https://via.placeholder.com/1280x720" alt="Fisherman in Action" className="img-fluid" />
+            <img src="/img/RonboTrialPicture.jpeg" alt="Fisherman in Action" className="img-fluid" />
           </div>
         </div>
       </section>
