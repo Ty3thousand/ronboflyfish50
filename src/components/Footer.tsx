@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const FooterComponent: React.FC = () => {
   return (
-    <footer className="bg-dark text-light py-4 mt-5">
+    <footer className="text-light py-4 grayBackground">
       <div className="container">
         <div className="row text-center text-md-start">
           {/* Follow Us Section */}
@@ -28,7 +28,7 @@ const FooterComponent: React.FC = () => {
               <h5 className="text-lg mb-3">Our Sponsors</h5>
               <div className="d-flex justify-content-center">
                 <img
-                  src="/img/sponsorphoto1.png"  // Ensure image is in public/img/
+                  src="/img/LIV_Vert_White.jpg"  // Ensure image is in public/img/
                   alt="Sponsor 1"
                   className="mx-2"
                   width="160"

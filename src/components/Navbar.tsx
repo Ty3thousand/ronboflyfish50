@@ -5,9 +5,9 @@ interface NavbarProps {
   initialVisitedStates?: string[];
 }
 
-const NavbarComponent: React.FC<NavbarProps> = ({ initialVisitedStates = ['Colorado'] }) => {
+const NavbarComponent: React.FC<NavbarProps> = ({ initialVisitedStates = ['Colorado', 'New Jersey'] }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark grayBackground">
       <div className="container-fluid">
         <Link href="/" legacyBehavior>
           <a className="navbar-brand">Fly Fishing 50 States</a>

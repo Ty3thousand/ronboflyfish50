@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import USMap from '../components/USMAP'; // Adjust the import path as necessary
 
-const visitedStates = new Set(['Colorado']); // Example visited states
+const visitedStates = new Set(['New Jersey', 'Colorado']); // Example visited states
 
 const allStates = [
   'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 

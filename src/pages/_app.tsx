@@ -1,6 +1,6 @@
 // pages/_app.tsx
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/globals.css'; // Import global CSS
+import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React, { useEffect } from 'react';

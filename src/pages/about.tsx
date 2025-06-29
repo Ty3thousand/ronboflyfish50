@@ -3,10 +3,8 @@ import React from 'react';
 const About = () => {
   return (
     <div>
-
-
       {/* Hero Section (Image of the fisherman) */}
-      <section className="hero-section bg-white py-5">
+      <section className="hero-section py-5">
         <div className="container text-center">
           <h1 style={{ fontSize: '3rem', color: 'black' }}>My Journey of Fly Fishing in 50 States</h1>
           <p className="lead" style={{ fontSize: '1.5rem', color: 'black' }}>
@@ -18,8 +16,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* About Section (Story about life, CSU, and Career) */}
-      <section className="about-section py-5 bg-white">
+      {/* About Section */}
+      <section className="about-section py-5">
         <div className="container text-center">
           <h2>My Journey</h2>
           <p className="lead">
@@ -36,12 +34,11 @@ const About = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="cta-section bg-white text-center py-5">
+      <section className="cta-section text-center py-5">
         <h2>Join Me on This Journey</h2>
         <p className="lead">Follow my fly fishing journey across all 50 states as I combine my passions for fishing, real estate, and adventure.</p>
-        <button className="btn btn-primary btn-lg mt-3">Follow the Adventure</button>
+        <button className="btn indexButtonColor btn-lg mt-3">Follow the Adventure</button>
       </section>
-
     </div>
   );
 };

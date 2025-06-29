@@ -1,16 +1,20 @@
-// components/Layout.tsx
 import React from 'react';
 import NavbarComponent from './Navbar';
 import FooterComponent from './Footer';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="d-flex flex-column min-vh-100"> {/* Ensures full height */}
+    <div className="d-flex flex-column min-vh-100">
       <NavbarComponent />
-      <main className="container mt-4 flex-grow-1"> {/* Allows content to expand */}
-        {children}
+
+      {/* MAIN CONTENT AREA */}
+      <main className="flex-grow-1 specialBackground">
+        <div className="container mt-4">
+          {children}
+        </div>
       </main>
-      <FooterComponent /> {/* Stays at bottom */}
+      <FooterComponent />
+
     </div>
   );
 };
