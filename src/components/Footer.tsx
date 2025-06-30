@@ -28,7 +28,7 @@ const FooterComponent: React.FC = () => {
               <h5 className="text-lg mb-3">Our Sponsors</h5>
               <div className="d-flex justify-content-center">
                 <img
-                  src="/img/LIV_Vert_White.jpg"  // Ensure image is in public/img/
+                  src="/img/Updated_LIV_Vert_White.png"  // Ensure image is in public/img/
                   alt="Sponsor 1"
                   className="mx-2"
                   width="160"
